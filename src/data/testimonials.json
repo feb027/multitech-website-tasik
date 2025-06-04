@@ -1,0 +1,14 @@
+[
+  {
+    "id": "testi-01",
+    "name": "Budi Santoso",
+    "testimonial": "Pelayanannya cepat dan hasilnya memuaskan. Laptop saya jadi seperti baru lagi!",
+    "avatar": "/images/avatars/budi.jpg" 
+  },
+  {
+    "id": "testi-02",
+    "name": "Ani Lestari",
+    "testimonial": "Teknisinya ramah dan sangat membantu menjelaskan masalah pada komputer saya. Recommended!",
+    "avatar": "/images/avatars/ani.jpg" 
+  }
+]

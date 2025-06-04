@@ -1,0 +1,43 @@
+[
+  {
+    "id": "gal-001",
+    "src": "/images/gallery/toko-baru.png", 
+    "alt": "Tampilan depan toko Multitech Tasikmalaya",
+    "title": "Wajah Baru Multitech",
+    "category": "Toko"
+  },
+  {
+    "id": "gal-002",
+    "src": "/images/gallery/laptop.png",
+    "alt": "Kumpulan Laptop",
+    "title": "Kumpulan laptop yang dijual",
+    "category": "Produk"
+  },
+  {
+    "id": "gal-003",
+    "src": "/images/gallery/toko-depan.png", 
+      "title": "Wajah Multitech",
+    "category": "Toko"
+  },
+  {
+    "id": "gal-004",
+    "src": "/images/gallery/toko-depan2.png", 
+    "alt": "Toko Depan Multitech Tasikmalaya 2",
+    "title": "Wajah Multitech",
+    "category": "Toko"
+  },
+  {
+    "id": "gal-005",
+    "src": "/images/gallery/toko-depan3.png", 
+    "alt": "Toko Depan Multitech Tasikmalaya 3",
+    "title": "Wajah Multitech",
+    "category": "Toko"
+  },
+  {
+    "id": "gal-006",
+    "src": "/images/gallery/toko-depan4.png", 
+    "alt": "Toko Depan Multitech Tasikmalaya 4",
+    "title": "Wajah Multitech",
+    "category": "Toko"
+  }
+]

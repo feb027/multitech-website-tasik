@@ -1,0 +1,20 @@
+[
+  {
+    "id": "servis-komputer",
+    "slug": "servis-komputer-pc",
+    "title": "Servis Komputer PC",
+    "shortDescription": "Perbaikan cepat dan handal untuk semua masalah PC Anda.",
+    "fullDescription": "Kami menangani berbagai kerusakan hardware dan software pada PC, mulai dari mati total, bluescreen, upgrade komponen, hingga instalasi ulang sistem operasi.",
+    "icon": "Computer", 
+    "image": "/images/services/service-pc.jpg" 
+  },
+  {
+    "id": "servis-laptop",
+    "slug": "servis-laptop",
+    "title": "Servis Laptop",
+    "shortDescription": "Solusi untuk laptop bermasalah, dari keyboard hingga layar.",
+    "fullDescription": "Layanan perbaikan laptop mencakup penggantian keyboard, baterai, LCD, perbaikan motherboard, dan masalah umum lainnya.",
+    "icon": "Laptop",
+    "image": "/images/services/service-laptop.jpg"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "Multitech Tasikmalaya",
+  "tagline": "Solusi IT Terpercaya Anda",
+  "address": "Jl. Contoh No. 123, Tasikmalaya",
+  "phone": "081234567890",
+  "email": "info@multitechtasikmalaya.com",
+  "operationalHours": "Senin - Sabtu: 09:00 - 17:00",
+  "socialMedia": [
+    { "name": "Facebook", "url": "https://facebook.com/multitechtasik" },
+    { "name": "Instagram", "url": "https://instagram.com/multitechtasik" }
+  ],
+  "history": "Berdiri sejak tahun 20XX, Multitech Tasikmalaya...",
+  "vision": "Menjadi penyedia solusi IT terdepan...",
+  "mission": "Memberikan layanan terbaik dengan harga kompetitif..."
+}

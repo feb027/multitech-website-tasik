@@ -1,26 +1,49 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities { /* Atau bisa juga di luar @layer jika lebih disukai */
+  @keyframes kenburns-top-left {
+    0% {
+      transform: scale(1) translate(0, 0);
+      transform-origin: top left;
+    }
+    100% {
+      transform: scale(1.15) translate(-5%, -5%); /* Sedikit zoom dan geser */
+      transform-origin: top left;
+    }
   }
-}
+  .animate-kenburns {
+    animation: kenburns-top-left 40s ease-out infinite alternate;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Variasi lain Ken Burns jika ingin arah berbeda */
+  @keyframes kenburns-bottom-right {
+    0% {
+      transform: scale(1) translate(0, 0);
+      transform-origin: bottom right;
+    }
+    100% {
+      transform: scale(1.15) translate(5%, 5%);
+      transform-origin: bottom right;
+    }
+  }
+  .animate-kenburns-br {
+    animation: kenburns-bottom-right 40s ease-out infinite alternate;
+  }
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+.animate-pulse-slow { animation: pulse-slow 5s infinite ease-in-out; }
+.animation-delay-2000 { animation-delay: 2s; }
+
+@keyframes pulse-subtle-vertical {
+  0%, 100% { transform: scaleY(1); opacity: 0.8; }
+  50% { transform: scaleY(1.02); opacity: 1; }
+}
+.animate-pulse-subtle-vertical {
+  animation: pulse-subtle-vertical 3s infinite ease-in-out;
+  transform-origin: center;
+}
 }

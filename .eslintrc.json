@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    // tambahkan plugin lain jika ada di sini, sebelum prettier
+    "prettier" // Harus terakhir
+  ],
+  "plugins": [
+    // tambahkan "tailwindcss" jika Anda menginstal eslint-plugin-tailwindcss
+  ],
+  "rules": {
+    // "tailwindcss/no-custom-classname": "warn", // Jika pakai eslint-plugin-tailwindcss
+    // "tailwindcss/classnames-order": "warn" // Diurus oleh prettier-plugin-tailwindcss
+  }
+}
