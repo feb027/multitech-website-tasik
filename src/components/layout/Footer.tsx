@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <ul className='space-y-3 text-sm'>
               <li>
                 <Link
-                  href='/layanan/servis-komputer'
+                  href='/layanan'
                   className='transition-colors hover:text-red-400'
                 >
                   Servis Komputer PC
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href='/layanan/servis-laptop'
+                  href='/layanan'
                   className='transition-colors hover:text-red-400'
                 >
                   Servis Laptop
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href='/layanan/instalasi-jaringan'
+                  href='/layanan'
                   className='transition-colors hover:text-red-400'
                 >
                   Instalasi Jaringan
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href='/layanan/printer'
+                  href='/layanan'
                   className='transition-colors hover:text-red-400'
                 >
                   Perbaikan Printer

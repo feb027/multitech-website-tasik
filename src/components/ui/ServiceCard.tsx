@@ -82,13 +82,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <p className='text-slate-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3'>
           {shortDescription}
         </p>
-        <Link
-          href={serviceLink}
-          className={`self-start inline-flex items-center gap-2 text-sm font-semibold ${accentTextClass} hover:opacity-80 transition-opacity duration-300 group/link`}
-        >
-          Pelajari Lebih Lanjut
-          <ArrowRight className='w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1' />
-        </Link>
       </div>
     </motion.div>
   );
