@@ -40,9 +40,9 @@ const historyData: TimelineEvent[] = [
     icon: Users,
   },
   {
-    year: '2024',
+    year: '2023',
     title: 'Lokasi Baru di Kahuripan',
-    description: 'Pada 1 Januari 2024, Multitech Computer pindah ke lokasi baru di Jalan Noenoeng Tisna Saputra No 54, Kahuripan, Tawang untuk melayani Anda lebih baik.',
+    description: 'Pada 1 Januari 2023, Multitech Computer pindah ke lokasi baru di Jalan Noenoeng Tisna Saputra No 54, Kahuripan, Tawang untuk melayani Anda lebih baik.',
     icon: CheckCircle,
   },
 ];
