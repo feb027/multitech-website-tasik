@@ -66,12 +66,9 @@ export async function POST(req: NextRequest) {
       to: 'cvmultitech_tasik@yahoo.co.id',
       subject: `[Website Contact] ${subject}`,
       text: `Pesan baru dari website Multitech:\n\nNama: ${name}\nEmail: ${email}\nTelepon: ${phone || '-'}\n\nSubjek: ${subject}\nPesan:\n${message}`,
-      html: `<h2>Pesan Baru dari Website Multitech</h2><p><b>Nama:</b> ${name}<br/><b>Email:</b> ${email}<br/><b>Telepon:</b> ${phone || '-'}<br/><b>Subjek:</b> ${subject}</p><p><b>Pesan:</b><br/>${message.replace(/\n/g, '<br/>')}</p>`,
-    };
-
-    await transporter.sendMail(mailOptions);
+      html: `<h2>Pesan Baru dari Website Multitech</h2><p><b>Nama:</b> ${name}<br/><b>Email:</b> ${email}<br/><b>Telepon:</b> ${phone || '-'}<br/><b>Subjek:</b> ${subject}</p><p><b>Pesan:</b><br/>${message.replace(/\n/g, '<br/>')}</p>`,    };    await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
-  } catch (err) {
+  } catch {
     return NextResponse.json(
       { error: 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.' },
       { status: 500 }

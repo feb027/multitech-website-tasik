@@ -2,10 +2,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
 
 export interface ServiceCardProps {
   slug: string;
@@ -18,7 +16,6 @@ export interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  slug,
   title,
   shortDescription,
   icon: IconComponent,
@@ -26,7 +23,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   delay = 0,
   colorAccent = 'red',
 }) => {
-  const serviceLink = `/layanan/${slug}`;
   const accentBorderClass = colorAccent === 'red' ? 'border-red-500' : 'border-[#00398D]';
   const accentTextClass = colorAccent === 'red' ? 'text-red-600' : 'text-[#00398D]';
   const titleHoverColorClass = colorAccent === 'red' ? 'group-hover:text-red-400' : 'group-hover:text-blue-300';

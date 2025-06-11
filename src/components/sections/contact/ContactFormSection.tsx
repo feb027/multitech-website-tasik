@@ -157,9 +157,8 @@ const ContactFormSection: React.FC = () => {
             message:
               result.error ||
               'Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.',
-          });
-        }
-      } catch (error) {
+          });        }
+      } catch {
         setSubmitStatus({
           success: false,
           message:
