@@ -138,10 +138,10 @@ const Footer: React.FC = () => {
             </p>
             <p className='mb-4 text-sm'>
               <a
-                href='mailto:cvmultitech_tasik@yahoo.co.id'
+                href='mailto:mcscom_tasikmalaya@yahoo.co.id'
                 className='transition-colors hover:text-red-400'
               >
-                cvmultitech_tasik@yahoo.co.id
+                mcscom_tasikmalaya@yahoo.co.id 
               </a>
             </p>
             <div className='mt-5 flex space-x-4'>

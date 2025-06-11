@@ -16,8 +16,14 @@ export interface SocialLinkServer {
 }
 export interface ContactInfoData {
   address: string;
-  phone: string;
-  email: string;
+  phones: {
+    label: string;
+    number: string;
+  }[];
+  emails: {
+    label: string;
+    address: string;
+  }[];
   operationalHours: string;
   socialMedia: SocialLinkServer[];
 }
@@ -67,8 +73,7 @@ const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ info }) => {
               <MapPin className='w-10 h-10 mr-4' strokeWidth={1.5}/>
               <h3 className='text-2xl font-bold font-heading'>Kunjungi Toko Kami</h3>
             </div>
-            <p className='text-slate-700 leading-relaxed mb-4 whitespace-pre-line'>{info.address}</p>
-            <a 
+            <p className='text-slate-700 leading-relaxed mb-4 whitespace-pre-line'>{info.address}</p>            <a 
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(info.address)}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -97,27 +102,49 @@ const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({ info }) => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
             className='lg:col-span-2 bg-gradient-to-br from-[#001A4D] via-[#002255] to-[#001A4D] p-8 md:p-10 rounded-xl shadow-2xl text-white flex flex-col'
-          >
-            <h3 className='text-3xl font-bold font-heading mb-8 text-center text-red-300'>Hubungi Langsung</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          >            <h3 className='text-2xl font-bold font-heading mb-6 text-center text-red-300'>Hubungi Langsung</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {/* Kontak Telepon */}
-              <a href={`tel:${info.phone.replace(/\s|-/g, '')}`} className="group block p-6 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-center transform hover:scale-105">
-                <PhoneCall className="w-10 h-10 text-red-400 mb-3 mx-auto transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                <p className="font-semibold text-lg">{info.phone}</p>
-                <p className="text-xs text-slate-300">Klik untuk menelepon</p>
-              </a>
+              <div className="p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-center transform hover:scale-105">
+                <PhoneCall className="w-8 h-8 text-red-400 mb-2 mx-auto" strokeWidth={1.5} />
+                <div className="space-y-2">
+                  {info.phones.map((phone, index) => (
+                    <div key={index}>
+                      <p className="text-xs text-slate-300 mb-1">{phone.label}</p>
+                      <a 
+                        href={`tel:${phone.number.replace(/\s|-/g, '')}`}
+                        className="font-semibold text-base hover:text-red-300 transition-colors duration-200 block"
+                      >
+                        {phone.number}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-300 mt-2">Klik nomor untuk menelepon</p>
+              </div>
               {/* Kontak Email */}
-              <a href={`mailto:${info.email}`} className="group block p-6 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-center transform hover:scale-105">
-                <Mail className="w-10 h-10 text-red-400 mb-3 mx-auto transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                <p className="font-semibold text-lg break-all">{info.email}</p>
-                <p className="text-xs text-slate-300">Klik untuk mengirim email</p>
-              </a>
+              <div className="p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-center transform hover:scale-105">
+                <Mail className="w-8 h-8 text-red-400 mb-2 mx-auto" strokeWidth={1.5} />
+                <div className="space-y-2">
+                  {info.emails.map((email, index) => (
+                    <div key={index}>
+                      <p className="text-xs text-slate-300 mb-1">{email.label}</p>
+                      <a 
+                        href={`mailto:${email.address}`}
+                        className="font-semibold text-sm break-all hover:text-red-300 transition-colors duration-200 block"
+                      >
+                        {email.address}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-300 mt-2">Klik email untuk mengirim pesan</p>
+              </div>
             </div>
 
-            <hr className="my-6 border-white/20" />
+            <hr className="my-4 border-white/20" />
 
-            <h4 className='text-2xl font-bold font-heading mb-6 text-center'>Ikuti Kami</h4>
+            <h4 className='text-xl font-bold font-heading mb-4 text-center'>Ikuti Kami</h4>
             <ul className='flex justify-center items-center space-x-6 md:space-x-8'>
               {info.socialMedia.map((social) => {
                 const IconComponent = iconComponents[social.iconName] || iconComponents.Default;

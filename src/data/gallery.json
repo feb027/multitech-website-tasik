@@ -8,33 +8,48 @@
   },
   {
     "id": "gal-002",
+    "src": "/images/gallery/alat.jpg", 
+    "alt": "Alat alat yang dipakai di Multitech Tasikmalaya",
+    "title": "Alat",
+    "category": "Alat"
+  },
+  {
+    "id": "gal-003",
+    "src": "/images/gallery/tempat-service.jpg", 
+    "alt": "Tempat Service Multitech Tasikmalaya",
+    "title": "Tempat Service",
+    "category": "Service"
+  },
+  {
+    "id": "gal-004",
     "src": "/images/gallery/laptop.png",
     "alt": "Kumpulan Laptop",
     "title": "Kumpulan laptop yang dijual",
     "category": "Produk"
   },
+  
   {
-    "id": "gal-003",
+    "id": "gal-005",
     "src": "/images/gallery/toko-depan.png", 
       "title": "Wajah Multitech",
     "category": "Toko"
   },
   {
-    "id": "gal-004",
+    "id": "gal-006",
     "src": "/images/gallery/toko-depan2.png", 
     "alt": "Toko Depan Multitech Tasikmalaya 2",
     "title": "Wajah Multitech",
     "category": "Toko"
   },
   {
-    "id": "gal-005",
+    "id": "gal-007",
     "src": "/images/gallery/toko-depan3.png", 
     "alt": "Toko Depan Multitech Tasikmalaya 3",
     "title": "Wajah Multitech",
     "category": "Toko"
   },
   {
-    "id": "gal-006",
+    "id": "gal-008",
     "src": "/images/gallery/toko-depan4.png", 
     "alt": "Toko Depan Multitech Tasikmalaya 4",
     "title": "Wajah Multitech",

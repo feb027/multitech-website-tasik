@@ -17,8 +17,26 @@ export const metadata: Metadata = {
 const companyContactInfo: ContactInfoData = {
   address:
     'J6XH+8PH, Jl. Noenoeng Tisnasaputra, Kahuripan, Kec. Tawang, Kab. Tasikmalaya, Jawa Barat',
-  phone: '0821-2039-5478',
-  email: 'cvmultitech_tasik@yahoo.co.id',
+  phones: [
+    {
+      label: 'Customer Service',
+      number: '0821-2039-5478'
+    },
+    {
+      label: 'Toko',
+      number: '0265-317-1058'
+    }
+  ],
+  emails: [
+    {
+      label: 'Email Toko',
+      address: 'mcscom_tasikmalaya@yahoo.co.id '
+    },
+    {
+      label: 'Email CV',
+      address: 'cvmultitech_tasik@yahoo.co.id'
+    }
+  ],
   operationalHours:
     'Senin - Jumat: 09.00 - 16.30 WIB\nSabtu: 09.00 - 15.00 WIB\nMinggu & Hari Libur Nasional: Tutup',
   socialMedia: [
