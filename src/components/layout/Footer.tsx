@@ -6,73 +6,145 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'; // Contoh
 
 // Data untuk link media sosial (sesuaikan dengan milik Multitech)
 const socialLinks = [
-  { name: 'Facebook', href: 'https://facebook.com/multitechtasik', Icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/multitechtasik', Icon: Instagram },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/multitechtasik',
+    Icon: Facebook,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/multitechtasik',
+    Icon: Instagram,
+  },
   { name: 'LinkedIn', href: '#', Icon: Linkedin }, // Jika ada
-  { name: 'YouTube', href: '#', Icon: Youtube },   // Jika ada
+  { name: 'YouTube', href: '#', Icon: Youtube }, // Jika ada
 ];
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='bg-[#001A4D] text-slate-200 pt-16 pb-8'> {/* Latar biru tua, teks terang */}
+    <footer className='bg-[#001A4D] pt-16 pb-8 text-slate-200'>
+      {' '}
+      {/* Latar biru tua, teks terang */}
       {/* Garis aksen merah di atas */}
-      <div className='h-1 bg-red-600 absolute top-0 left-0 right-0'></div>
-
+      <div className='absolute top-0 right-0 left-0 h-1 bg-red-600'></div>
       <div className='container mx-auto px-6'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12'>
+        <div className='mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4'>
           {/* Kolom 1: Logo & Deskripsi Singkat */}
           <div className='lg:col-span-1'>
-            <Link href='/' className='inline-block mb-4'>
+            <Link href='/' className='mb-4 inline-block'>
               {/* Ganti dengan komponen Logo jika sudah ada, atau next/image */}
-              <h2 className='text-3xl font-bold text-white hover:text-red-500 transition-colors duration-300'>
+              <h2 className='text-3xl font-bold text-white transition-colors duration-300 hover:text-red-500'>
                 MULTITECH
               </h2>
             </Link>
-            <p className='text-sm text-slate-300 leading-relaxed'>
-              Solusi IT profesional dan terpercaya di Tasikmalaya. Kami hadir untuk semua kebutuhan teknologi Anda.
+            <p className='text-sm leading-relaxed text-slate-300'>
+              Solusi IT profesional dan terpercaya di Tasikmalaya. Kami hadir
+              untuk semua kebutuhan teknologi Anda.
             </p>
           </div>
 
           {/* Kolom 2: Layanan Utama (Contoh) */}
           <div>
-            <h4 className='text-lg font-semibold text-white mb-5 border-l-4 border-red-500 pl-3'>
+            <h4 className='mb-5 border-l-4 border-red-500 pl-3 text-lg font-semibold text-white'>
               Layanan Kami
             </h4>
             <ul className='space-y-3 text-sm'>
-              <li><Link href="/layanan/servis-komputer" className='hover:text-red-400 transition-colors'>Servis Komputer PC</Link></li>
-              <li><Link href="/layanan/servis-laptop" className='hover:text-red-400 transition-colors'>Servis Laptop</Link></li>
-              <li><Link href="/layanan/instalasi-jaringan" className='hover:text-red-400 transition-colors'>Instalasi Jaringan</Link></li>
-              <li><Link href="/layanan/printer" className='hover:text-red-400 transition-colors'>Perbaikan Printer</Link></li>
+              <li>
+                <Link
+                  href='/layanan/servis-komputer'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Servis Komputer PC
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/layanan/servis-laptop'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Servis Laptop
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/layanan/instalasi-jaringan'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Instalasi Jaringan
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/layanan/printer'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Perbaikan Printer
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Kolom 3: Tautan Navigasi */}
           <div>
-            <h4 className='text-lg font-semibold text-white mb-5 border-l-4 border-red-500 pl-3'>
+            <h4 className='mb-5 border-l-4 border-red-500 pl-3 text-lg font-semibold text-white'>
               Navigasi
             </h4>
             <ul className='space-y-3 text-sm'>
-              <li><Link href="/tentang-kami" className='hover:text-red-400 transition-colors'>Tentang Kami</Link></li>
-              <li><Link href="/kontak" className='hover:text-red-400 transition-colors'>Hubungi Kami</Link></li>
-              <li><Link href="/blog" className='hover:text-red-400 transition-colors'>Blog & Artikel</Link></li> {/* Jika ada */}
-              <li><Link href="/kebijakan-privasi" className='hover:text-red-400 transition-colors'>Kebijakan Privasi</Link></li>
+              <li>
+                <Link
+                  href='/tentang-kami'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Tentang Kami
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/kontak'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Hubungi Kami
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/blog'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Blog & Artikel
+                </Link>
+              </li>{' '}
+              {/* Jika ada */}
+              <li>
+                <Link
+                  href='/kebijakan-privasi'
+                  className='transition-colors hover:text-red-400'
+                >
+                  Kebijakan Privasi
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Kolom 4: Kontak & Media Sosial */}
           <div>
-            <h4 className='text-lg font-semibold text-white mb-5 border-l-4 border-red-500 pl-3'>
+            <h4 className='mb-5 border-l-4 border-red-500 pl-3 text-lg font-semibold text-white'>
               Tetap Terhubung
             </h4>
-            <p className='text-sm mb-2'>
-              Jl. Contoh No. 123, Kota Tasikmalaya
+            <p className='mb-2 text-sm'>
+              Jl. Noenoeng Tisna Saputra No.54, Tawang, Tasikmalaya
             </p>
-            <p className='text-sm mb-4'>
-              <a href="mailto:info@multitechtasik.com" className='hover:text-red-400 transition-colors'>info@multitechtasik.com</a>
+            <p className='mb-4 text-sm'>
+              <a
+                href='mailto:cvmultitech_tasik@yahoo.co.id'
+                className='transition-colors hover:text-red-400'
+              >
+                cvmultitech_tasik@yahoo.co.id
+              </a>
             </p>
-            <div className='flex space-x-4 mt-5'>
+            <div className='mt-5 flex space-x-4'>
               {socialLinks.map(({ name, href, Icon }) => (
                 <a
                   key={name}
@@ -81,7 +153,7 @@ const Footer: React.FC = () => {
                   rel='noopener noreferrer'
                   aria-label={name}
                   title={name}
-                  className='text-slate-300 hover:text-red-500 transform hover:scale-110 transition-all duration-200'
+                  className='transform text-slate-300 transition-all duration-200 hover:scale-110 hover:text-red-500'
                 >
                   <Icon size={22} />
                 </a>
@@ -92,7 +164,8 @@ const Footer: React.FC = () => {
 
         <div className='border-t border-slate-700 pt-8 text-center'>
           <p className='text-xs text-slate-400'>
-            © {currentYear} Multitech Tasikmalaya. Dirancang dan dikembangkan dengan ❤️.
+            © {currentYear} Multitech Tasikmalaya. Dirancang dan dikembangkan
+            dengan ❤️.
           </p>
         </div>
       </div>
